@@ -174,8 +174,8 @@ echo
 	echo "Copying the new packages.x86_64 file to the build folder"
 	cp -f ../archiso/packages.x86_64 $buildFolder/archiso/packages.x86_64
 	echo
-	echo "Changing group for polkit folder"
-	sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
+	#echo "Changing group for polkit folder"
+	#sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
 	#is not working so fixing this during calamares installation
 
 echo
@@ -231,8 +231,8 @@ tput sgr0
 echo "###########################################################"
 echo
 
-	#echo "Cleaning the cache from /var/cache/pacman/pkg/"
-	#yes | sudo pacman -Scc
+	echo "Cleaning the cache from /var/cache/pacman/pkg/"
+	yes | sudo pacman -Scc
 
 echo
 echo "################################################################## "
@@ -287,8 +287,8 @@ tput sgr0
 echo "################################################################## "
 echo
 
-	#echo "Deleting the build folder if one exists - takes some time"
-	#[ -d $buildFolder ] && sudo rm -rf $buildFolder
+	echo "Deleting the build folder if one exists - takes some time"
+	[ -d $buildFolder ] && sudo rm -rf $buildFolder
 
 echo
 echo "##################################################################"

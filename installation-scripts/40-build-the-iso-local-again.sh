@@ -26,22 +26,22 @@ echo
 	#Let us set the desktop"
 	#First letter of desktop is small letter
 
-	desktop="xfce"
-	dmDesktop="xfce"
+	desktop="plasma"
+	dmDesktop="plasma"
 
-	arcolinuxVersion='v21.03.11'
+	carliVersion='v21.03.1'
 
-	isoLabel='arcolinux-'$arcolinuxVersion'-x86_64.iso'
+	isoLabel='carli-'$carliVersion'-x86_64.iso'
 
 	# setting of the general parameters
 	archisoRequiredVersion="archiso 51-1"
-	buildFolder=$HOME"/arcolinux-build"
-	outFolder=$HOME"/ArcoLinux-Out"
+	buildFolder=$HOME"/carli-build"
+	outFolder=$HOME"/Carli-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
 
 	echo "################################################################## "
 	echo "Building the desktop                   : "$desktop
-	echo "Building version                       : "$arcolinuxVersion
+	echo "Building version                       : "$carliVersion
 	echo "Iso label                              : "$isoLabel
 	echo "Do you have the right archiso version? : "$archisoVersion
 	echo "What is the required archiso version?  : "$archisoRequiredVersion
@@ -151,8 +151,8 @@ echo
 echo "################################################################## "
 tput setaf 2
 echo "Phase 4 :"
-echo "- Deleting any files in /etc/skel"
-echo "- Getting the last version of bashrc in /etc/skel"
+#echo "- Deleting any files in /etc/skel"
+#echo "- Getting the last version of bashrc in /etc/skel"
 echo "- Removing the old packages.x86_64 file from build folder"
 echo "- Copying the new packages.x86_64 file to the build folder"
 echo "- Changing group for polkit folder"
@@ -160,13 +160,13 @@ tput sgr0
 echo "################################################################## "
 echo
 
-	echo "Deleting any files in /etc/skel"
-	rm -rf $buildFolder/archiso/airootfs/etc/skel/.* 2> /dev/null
-	echo
+	#echo "Deleting any files in /etc/skel"
+	#rm -rf $buildFolder/archiso/airootfs/etc/skel/.* 2> /dev/null
+	#echo
 
-	echo "Getting the last version of bashrc in /etc/skel"
-	echo
-	wget https://raw.githubusercontent.com/arcolinux/arcolinux-root/master/etc/skel/.bashrc-latest -O $buildFolder/archiso/airootfs/etc/skel/.bashrc
+	#echo "Getting the last version of bashrc in /etc/skel"
+	#echo
+	#wget https://raw.githubusercontent.com/arcolinux/arcolinux-root/master/etc/skel/.bashrc-latest -O $buildFolder/archiso/airootfs/etc/skel/.bashrc
 
 	echo "Removing the old packages.x86_64 file from build folder"
 	rm $buildFolder/archiso/packages.x86_64
@@ -174,8 +174,8 @@ echo
 	echo "Copying the new packages.x86_64 file to the build folder"
 	cp -f ../archiso/packages.x86_64 $buildFolder/archiso/packages.x86_64
 	echo
-	echo "Changing group for polkit folder"
-	sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
+	#echo "Changing group for polkit folder"
+	#sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
 	#is not working so fixing this during calamares installation
 
 echo
@@ -191,21 +191,21 @@ echo
 	#Setting variables
 
 	#profiledef.sh
-	oldname1='iso_name=arcolinux'
-	newname1='iso_name=arcolinux'
+	oldname1='iso_name=carli'
+	newname1='iso_name=carli'
 
-	oldname2='iso_label="arcolinux'
-	newname2='iso_label="arcolinux'
+	oldname2='iso_label="carli'
+	newname2='iso_label="carli'
 
-	oldname3='ArcoLinux'
-	newname3='ArcoLinux'
+	oldname3='Carli'
+	newname3='Carli'
 
 	#hostname
-	oldname4='ArcoLinux'
-	newname4='ArcoLinux'
+	oldname4='Carli'
+	newname4='Carli'
 
 	#sddm.conf user-session
-	oldname5='Session=xfce'
+	oldname5='Session=plasma'
 	newname5='Session='$dmDesktop
 
 	echo "Changing all references"
