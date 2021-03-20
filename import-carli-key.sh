@@ -14,7 +14,7 @@
 ##################################################################################################################
 
 echo "get the carli key in"
-sudo pacman-key --recv-keys 7B01FA17CA801345 --keyserver hkp://ipv4.pool.sks-keyservers.net:11371
+sudo pacman-key --recv-keys 7B01FA17CA801345 --keyserver hkp://pool.sks-keyservers.net:80
 
 echo "Lsign the keys"
 sudo pacman-key --lsign-key 7B01FA17CA801345
