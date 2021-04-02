@@ -29,12 +29,12 @@ echo
 	desktop="plasma"
 	dmDesktop="plasma"
 
-	carliVersion='v21.03.1'
+	carliVersion='v21.04.1'
 
 	isoLabel='carli-'$carliVersion'-x86_64.iso'
 
 	# setting of the general parameters
-	archisoRequiredVersion="archiso 51-1"
+	archisoRequiredVersion="archiso 52-1"
 	buildFolder=$HOME"/carli-build"
 	outFolder=$HOME"/Carli-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
@@ -191,8 +191,8 @@ echo
 	#Setting variables
 
 	#profiledef.sh
-	oldname1='iso_name=carli'
-	newname1='iso_name=carli'
+	oldname1='iso_name="carli'
+	newname1='iso_name="carli'
 
 	oldname2='iso_label="carli'
 	newname2='iso_label="carli'
