@@ -83,6 +83,7 @@ partimage
 pcsclite
 ppp
 pptpclient
+pv
 qemu-guest-agent
 reflector
 reiserfsprogs
@@ -138,5 +139,5 @@ git
 base-devel
 yay-bin
 neofetch
-sublime-text-dev
+sublime-text-4
 termite
