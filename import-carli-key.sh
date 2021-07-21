@@ -19,6 +19,11 @@ sudo pacman-key --recv-keys 7B01FA17CA801345 --keyserver hkp://pool.sks-keyserve
 echo "Lsign the keys"
 sudo pacman-key --lsign-key 7B01FA17CA801345
 
+echo "If there are keyserver issues..."
+echo "Download the keys from the github server"
+echo "and install them with sudo pacman -U ..."
+echo "https://github.com/arcolinuxiso/carli_repo/tree/master/x86_64 "
+
 echo "################################################################"
 echo "###################        Done           ######################"
 echo "################################################################"
