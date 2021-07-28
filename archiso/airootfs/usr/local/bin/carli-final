@@ -32,6 +32,11 @@ rm -f /etc/polkit-1/rules.d/49-nopasswd_global.rules
 rm /root/{.automated_script.sh,.zlogin}
 mv /etc/carli-release /etc/lsb-release
 
+echo "Remove /etc/pacman.d/gnupg"
+echo "#################################"
+rm -rf /etc/pacman.d/gnupg/*
+
+
 echo "Permission of root"
 echo "#################################"
 chmod -v 750 /root
