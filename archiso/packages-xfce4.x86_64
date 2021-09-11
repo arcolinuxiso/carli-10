@@ -1,5 +1,3 @@
-#
-# SPDX-License-Identifier: GPL-3.0-or-later
 alsa-utils
 amd-ucode
 arch-install-scripts
@@ -129,6 +127,7 @@ xfce4-goodies
 #Calamares
 calamares
 carli-calamares-config
+#carli-calamares-qml-config
 carli-system-installation
 grub
 os-prober

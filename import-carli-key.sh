@@ -13,8 +13,14 @@
 #
 ##################################################################################################################
 
+echo "Run the alias 'fix-pacman-keyserver'"
+echo "in a terminal first to have the correct"
+echo "keyservers in our /etc/pacman.d/gnupg/gpg.conf"
+
+sleep 5
+
 echo "get the carli key in"
-sudo pacman-key --recv-keys 7B01FA17CA801345 --keyserver hkp://pool.sks-keyservers.net:80
+sudo pacman-key --recv-keys 7B01FA17CA801345
 
 echo "Lsign the keys"
 sudo pacman-key --lsign-key 7B01FA17CA801345

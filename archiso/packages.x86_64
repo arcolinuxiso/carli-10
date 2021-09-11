@@ -132,6 +132,7 @@ kate
 #Calamares
 calamares
 carli-calamares-config
+#carli-calamares-qml-config
 carli-system-installation
 grub
 os-prober
@@ -143,3 +144,4 @@ yay-bin
 neofetch
 sublime-text-4
 networkmanager
+kinit
