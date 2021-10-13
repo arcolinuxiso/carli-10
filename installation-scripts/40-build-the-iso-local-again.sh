@@ -29,7 +29,7 @@ echo
 	desktop="plasma"
 	dmDesktop="plasma"
 
-	carliVersion='v21.09.1'
+	carliVersion='v21.10.01'
 
 	isoLabel='carli-'$carliVersion'-x86_64.iso'
 

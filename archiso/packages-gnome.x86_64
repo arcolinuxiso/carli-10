@@ -130,6 +130,7 @@ guake
 calamares
 carli-calamares-config
 #carli-calamares-qml-config
+carli-mirrorlist
 carli-system-installation
 grub
 os-prober
