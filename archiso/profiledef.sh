@@ -2,10 +2,10 @@
 # shellcheck disable=SC2034
 
 iso_name="carli"
-iso_label="carli-v21.10.01"
+iso_label="carli-v21.11.01"
 iso_publisher="Carli Linux <https://www.arcolinuxiso.com>"
 iso_application="Carli Linux Live/Rescue CD"
-iso_version="v21.10.01"
+iso_version="v21.11.01"
 install_dir="arch"
 buildmodes=('iso')
 bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito' 'uefi-x64.systemd-boot.esp' 'uefi-x64.systemd-boot.eltorito')
